@@ -1,0 +1,1699 @@
+[
+  {
+    "question": "D Class IP 주소의 대역은?",
+    "options": [
+      "A. 0.0.0.0 ~ 127.255.255.255",
+      "B. 128.0.0.0 ~ 191.255.255.255",
+      "C. 224.0.0.0 ~ 239.255.255.255",
+      "D. 240.0.0.0 ~ 255.255.255.255"
+    ],
+    "answer": "C. 224.0.0.0 ~ 239.255.255.255"
+  },
+  {
+    "question": "이미지 옵티마이저에서 만들어진 섬네일을 호출하는 URL의 구성요소가 아닌것은?",
+    "options": [
+      "A. CDN 도메인",
+      "B. 오브젝트 스토리지 내의 파일명",
+      "C. 섬네일 생생 옵션",
+      "D. 토큰키"
+    ],
+    "answer": "D. 토큰키"
+  },
+  {
+    "question": "이미지 옵티마이저에서 다음과 같은쿼리스트링이 의미하는 것이 아닌것은? /파일 명 .jpg?type=m_wm&w=512&h=1024& bgcolor=000011&wm_path=http://watermar k_URL&wm_offx=11 &vm_offy=10&wm_alig n=2&anilimit=100&extopt=3",
+    "options": [
+      "A. 리사이즈 & 크롭",
+      "B. 가로크기는 512",
+      "C. 워 터 마크 삽입",
+      "D. 우측 상단을 기준 가로 11 픽셀，세로 10픽셀 이동하여 워터마크를 찍음ommit"
+    ],
+    "answer": "A. 리사이즈 & 크롭"
+  },
+  {
+    "question": "VOD Transcoder에 대한 설명 중 틀린 것은?",
+    "options": [
+      "A. VOD Transcoder는 CDN과 연계가 가능하다",
+      "B. Input은 Object Storage를 사용할 수 있다",
+      "C. 썸네일 설정시 각 output당 10개의 썸네일이 추출된다.",
+      "D. Output 경로는 File Storage와 Object Storage에 설정할 수 있다."
+    ],
+    "answer": "D. Output 경로는 File Storage와 Object Storage에 설정할 수 있다."
+  },
+  {
+    "question": "다음중 UDP로만제공되는서비스는 무엇인가?",
+    "options": [
+      "A. DNS 서비스",
+      "B. 넷 바이오스 서비스",
+      "C. NTP 서비스",
+      "D. RPC 서비스"
+    ],
+    "answer": "C. NTP 서비스"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼의 로드밸런서에 대한 설 명으로 옳은 것을 고르시오",
+    "options": [
+      "A. Classic 환경에는 총 두 가지 종류의 로드밸런서가 존재한다",
+      "B. VPC 환경에서는 로드밸런서 생성 시 멀티존 생성이 필수적이다.",
+      "C. 서비스할 프로토콜의 종류에 따라 Application/Network 타입으로 갈라진다.",
+      "D. 세션 유지 기능이 필요한 경우, Network 로드밸 런서를 사용해야한다."
+    ],
+    "answer": "A. Classic 환경에는 총 두 가지 종류의 로드밸런서가 존재한다"
+  },
+  {
+    "question": "P헤더에서 TTL은 몇 Bit가 할당되어 있는가?",
+    "options": [
+      "A. 4",
+      "B. 6",
+      "C. 8",
+      "D. 10"
+    ],
+    "answer": "C. 8"
+  },
+  {
+    "question": "이미지 옵티마이저에서 리사이즈 및 크롭 옵션이 아닌것은?",
+    "options": [
+      "A. w",
+      "B. align",
+      "C. bgcolor",
+      "D. faceopt"
+    ],
+    "answer": "C. bgcolor"
+  },
+  {
+    "question": "네이버클라우드플랫폼 Global DNS 상품이 지원하는 레코드 타입이 아닌 것을 고르시오",
+    "options": [
+      "A. A",
+      "B. NS",
+      "C. CNAME",
+      "D. SOA"
+    ],
+    "answer": "D. SOA"
+  },
+  {
+    "question": "다음 네 개의 상품 중 세 개의 상품은 네이버 클라우드 플랫폼의 네트워크망과 외부망간의 통신이 필요로 할 때 사용됩니다. 나머지 이질적인 상품 하나는 무엇인가요?",
+    "options": [
+      "A. Cloud Connect",
+      "B. Cloud Insight",
+      "C. IPSEC VPN",
+      "D. SSL VPN"
+    ],
+    "answer": "B. Cloud Insight"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼의 VPC 환경에서 ACG 룰이 적용되는 장치는 무엇인가요?",
+    "options": [
+      "A. 서버",
+      "B. 서버 NIC",
+      "C. IP",
+      "D. Subnet"
+    ],
+    "answer": "B. 서버 NIC"
+  },
+  {
+    "question": "CIDR에서 서브넷이 27bit인 경우 몇개의 IP를 사용할 수 있는가?",
+    "options": [
+      "A. 1",
+      "B. 6",
+      "C. 14",
+      "D. 30"
+    ],
+    "answer": "D. 30"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 리소스 GRM IP 리소스 타입의 헬스 체크 interval로 설정할 수 없는 것을 고르시오",
+    "options": [
+      "A. 30",
+      "B. 60",
+      "C. 120",
+      "D. 300"
+    ],
+    "answer": "C. 120"
+  },
+  {
+    "question": "다음 중 프로토콜을 TCP 이용하는 서비스가 아닌것을 고르시오.",
+    "options": [
+      "A. SSH",
+      "B. FTP",
+      "C. NTP",
+      "D. RDP"
+    ],
+    "answer": "C. NTP"
+  },
+  {
+    "question": "다음의 설명이 지칭하는 용어는? \"CDN 캐시서버(옛지서버)에서 캐싱된 데이터를 지우는 기능\"",
+    "options": [
+      "A. HIT",
+      "B. Streaming",
+      "C. Purge",
+      "D. Cache expiry"
+    ],
+    "answer": "C. Purge"
+  },
+  {
+    "question": "네이버클라우드 CDN+에 대한 설명으로 잘못된 것을 고르시오",
+    "options": [
+      "A. 오리진으로 네이버 클라우드 플랫폼의 Object Storage만 사용할 수 있다",
+      "B. 국내 서비스에 최적화된 CDN 상품이다.",
+      "C. 개인 소장 도메인을 CDN 서비스 도메인으로 사용할 수 있다.",
+      "D. CDN도메인을 HTTPS로 사용하기 위해서는 오리진에서도 HTTPS를 지원해야 한다"
+    ],
+    "answer": "A. 오리진으로 네이버 클라우드 플랫폼의 Object Storage만 사용할 수 있다"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼의 로드밸런서에서 제공되지 않는 로드 분배 알고리즘은 무엇인가?",
+    "options": [
+      "A. Round Robin",
+      "B. Weighted Round Robin",
+      "C. Least Connection",
+      "D. Source IP Hash"
+    ],
+    "answer": "B. Weighted Round Robin"
+  },
+  {
+    "question": "OSI 7 Layer의 2계층에 해당하는 네트워크 장비는?",
+    "options": [
+      "A. 라우터",
+      "B. 로드밸 런서",
+      "C. 스위치",
+      "D. 방화벽"
+    ],
+    "answer": "C. 스위치"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 로드밸런서에서 제공하는 밸런싱 매소드 중 다음이 지칭하는 것을 고르시오. \"정적 해쉬 테이블에 있는 소스 IP를 찾아 실제 서버 풀로 요청을 배분하는 방식\"",
+    "options": [
+      "A. Round-Robin",
+      "B. Weighted",
+      "C. Least-Connection",
+      "D. Source IP hash"
+    ],
+    "answer": "D. Source IP hash"
+  },
+  {
+    "question": "GRM에서 제공하는 밸런싱 메소드가 아닌 것을 고르시오.",
+    "options": [
+      "A. Round Robin",
+      "B. Source IP hash",
+      "C. Weighted",
+      "D. Geolocation"
+    ],
+    "answer": "B. Source IP hash"
+  },
+  {
+    "question": "다음 중에서 ，Cloud Activity Tracer 수집된 로그에서 확인할 수 있는 정보가 아닌것은?",
+    "options": [
+      "A. 작업내역",
+      "B. 작업상태",
+      "C. 계정유형",
+      "D. 접속내역"
+    ],
+    "answer": "D. 접속내역"
+  },
+  {
+    "question": "네이버클라우드플랫폼 Cloud DB for My-SQL에서 DB 및 User 생성에 대해 옳은 것은?",
+    "options": [
+      "A. 쿼리를 통해 DB 및 User 생성이 가능하다",
+      "B. 쿼리를 통해 DB 생성만 가능하다",
+      "C. 쿼리를 통해 User 생성만 가능하다",
+      "D. 쿼리를 통해 DB와 USER을 생성 하는 것은 불가능하며，콘솔을 통해 기능을 제공하고 있다."
+    ],
+    "answer": "D. 쿼리를 통해 DB와 USER을 생성 하는 것은 불가능하며，콘솔을 통해 기능을 제공하고 있다."
+  },
+  {
+    "question": "다음 중，Cloud DB for MS-SQL의 재시작 기능과 관련하여 잘못된 것은?",
+    "options": [
+      "A. 재시작을 실행하면 2가지 옵션(Without Fail-over, With Fail-over)가 제공된다",
+      "B. 재부팅 예약이 가능하다",
+      "C. With Fail-over의 경우, 서비스 다운타임이 짧으며, 사용자가 설정한 SSMS 내용이 그대로 유지된다.",
+      "D. Without Fail-over 옵션 선택 시, 서비스 다운 타임이 몇 분 이상 걸릴 수 있다."
+    ],
+    "answer": "D. Without Fail-over 옵션 선택 시, 서비스 다운 타임이 몇 분 이상 걸릴 수 있다."
+  },
+  {
+    "question": "다음 중，Sub Account에 대한 설명 중 옳지 않은 것은?",
+    "options": [
+      "A. Sub account 대시보드에서 서브 계정 수, 그룹 수, 정책 수를 확인할 수 있다",
+      "B. 서브 계정의 정보를 수정 및 삭제는 가능하나 일시정지 기능은 제공되고 있지 않다.",
+      "C. 다수의 서브 계정에 동일한 정책이 반영되도록 그룹 기능을 제공한다.",
+      "D. 서브 계정들이 이용할 수 있는 권한들을 묶어 정책으로 제공한다."
+    ],
+    "answer": "B. 서브 계정의 정보를 수정 및 삭제는 가능하나 일시정지 기능은 제공되고 있지 않다."
+  },
+  {
+    "question": "Cloud DB for MySQL 생성 시 자동 생성되는 항목을 모두 고르시오",
+    "options": [
+      "A. Private Domain",
+      "B. ACG",
+      "C. Public Domain",
+      "D. Event Alarm"
+    ],
+    "answer": "A. Private Domain\nB. ACG"
+  },
+  {
+    "question": "다음 중，네이버클라우드플랫폼 Cloud DB for MS-SQL의 Config group에 대한 설명 중 잘못된 것을 (모두) 고르시오.",
+    "options": [
+      "A. Cloud DB 서비스에 적용 가능한 Config group을 생성，변경，삭제할 수 있다.",
+      "B. 기본 제공되는 Config group은 변경 및 삭제할 수 없다.",
+      "C. 삭제하려는 Config group이 적용된 서버가 있더라도 삭제가 가능하다.",
+      "D. Principal DB와 Mirror DB에 서로 다른 Config group 값이 적용 가능하다"
+    ],
+    "answer": "C. 삭제하려는 Config group이 적용된 서버가 있더라도 삭제가 가능하다.\nD. Principal DB와 Mirror DB에 서로 다른 Config group 값이 적용 가능하다"
+  },
+  {
+    "question": "다음 중，네이버클라우드플랫폼 VPC 환경에서의 Cloud Insight에 대한 설 명 중 옳지 않은 것은?",
+    "options": [
+      "A. 상품들의 성능 지표를 통합 관리하고 장애 발생 시 담당자에게 장애 ， 정보를 신속히 전달할 수 있는 모니터링 서비스",
+      "B. 수집된 네이버 클라우드 플랫폼 및 사용자 애플리케이션의 성능 지표를 하나의 Dashboard로 시각화하여 정보를 보여준다",
+      "C. Sub Account는 Cloud Insight을 이용할 방법이 없다.",
+      "D. Cloud Insightb 수집한 성능 지표를 최대 1 년간보관한다."
+    ],
+    "answer": "C. Sub Account는 Cloud Insight을 이용할 방법이 없다."
+  },
+  {
+    "question": "네이버클라우드플랫폼 Cloud DB for MySQL에서 제공하는 이벤트 항목 중 Slow Query Count 항목에 대해 옳은 설 명은?",
+    "options": [
+      "A. 1초 이상 실행되는 쿼리 개수",
+      "B. 쿼리 요청시간이 2초 이상 걸리는 쿼리 개수",
+      "C. Query_timeO| 3초 이상 걸리는 쿼리개수",
+      "D. 슬로우쿼리 기준값은 10초이다."
+    ],
+    "answer": "A. 1초 이상 실행되는 쿼리 개수"
+  },
+  {
+    "question": "다음 중 클래식 플랫폼에서 Preinstall Image로 제공하고 있지 않은 DBMS는?",
+    "options": [
+      "A. MariaDB",
+      "B. Redis",
+      "C. Aurora",
+      "D. MSSQL"
+    ],
+    "answer": "C. Aurora"
+  },
+  {
+    "question": "다음 중 네이버 클라우드 플랫폼에서 제공하는 Analytics 상품이 아닌 것은?",
+    "options": [
+      "A. Elasticsearch Service",
+      "B. Cloud Data Streaming Service",
+      "C. Cloud Platform Analytics",
+      "D. Data Analytics Service"
+    ],
+    "answer": "C. Cloud Platform Analytics"
+  },
+  {
+    "question": "성된다.",
+    "options": [
+      "B. 슬레이브 에는 데이터베이스의 읽기부하 분산을 위해 생성하는 복제 DB로 한대 단위로 생성된다.",
+      "C. 기본 제공되는 50GB의 디스크는 운영체제를 위한 디스크로 추가 증설이 가능하고，이용 요금에 포함되지 않음",
+      "D. DB 데이터를 저장하기 위한 데이터 스토리지는 별도로 사용량에 따른 시간 요금으로 과금"
+    ],
+    "answer": "C. 기본 제공되는 50GB의 디스크는 운영체제를 위한 디스크로 추가 증설이 가능하고，이용 요금에 포함되지 않음"
+  },
+  {
+    "question": "Cloud DB for MySQL에서 설정할 수 있는 DB이벤트 항목이 아닌것은?",
+    "options": [
+      "A. Connections",
+      "B. Slow Query",
+      "C. Replication",
+      "D. Backup"
+    ],
+    "answer": "D. Backup"
+  },
+  {
+    "question": "Cloud DB for MSSQL에 대한 스토리지에 대한 설 명으로 맞는 것은?",
+    "options": [
+      "A. 운영체제를 위한 기본 디스크는 50GB가 기본제공됩니다",
+      "B. 운영체제가 설치되는 기본 디스크는 용량 변경 불가능합니다.",
+      "C. 최초 DB 생성 시 HDD로만 생성이 가능합니다",
+      "D. 데이터를 저장하기 위한 스토리지 증가 시 50GB단위로 과금됩니다."
+    ],
+    "answer": "B. 운영체제가 설치되는 기본 디스크는 용량 변경 불가능합니다."
+  },
+  {
+    "question": "다음 중，Cloud Activity Tracer에 대한 설 명 중 옳지 않은 것은?",
+    "options": [
+      "A. Cloud Activity Tracer는 155개 종류의 네이버클라우드플랫폼 계정 활동 로그를 자동으로 수집하고 기록합니다.",
+      "B. Cloud Activity Tracer를 사용하기 위해서는 에이전트 설치가 필요합니다.",
+      "C. Cloud Activity Tracer는 CLA와의 연동이 필수적입니다.",
+      "D. Cloud Activity Tracer는 로그 필터링 기능을 제공하고 있습니다"
+    ],
+    "answer": "C. Cloud Activity Tracer는 CLA와의 연동이 필수적입니다."
+  },
+  {
+    "question": "다음 중 Cloud DB for MySQL에 대한 설명으로 맞는 것은?",
+    "options": [
+      "A. 매일 자동으로 DB 백업이 진행되며 최대 6개월까지 보관됩니다.",
+      "B. 최대 4대까지 복제 슬레이브 DB 확장이 가능하며 읽기 부하 분산이 가능합니다.",
+      "C. 장애 또는 이벤트 발생시 사용자의 메일과 SMS로 빠르게 장애 현황을 알려드립니다.",
+      "D. 기본 10GB 데이터 스토리지를 제공하며， 10GB 단위로 3TB까지 자동으로 용량이 증가합니다."
+    ],
+    "answer": "C. 장애 또는 이벤트 발생시 사용자의 메일과 SMS로 빠르게 장애 현황을 알려드립니다."
+  },
+  {
+    "question": "서비스 페이지 또는 웹 에 접속하는 실 사용자 데이터를 (PC ) 수집하여 국가，브라우저， Device 별로 웹 페이지 속도와 PV Count를 분석해주는 네이버클라우드 플랫폼서비스는 무엇인지 고르시오.",
+    "options": [
+      "A. ELSA",
+      "B. RUA",
+      "C. CLA",
+      "D. WMS"
+    ],
+    "answer": "B. RUA"
+  },
+  {
+    "question": "Cloud DB for MySQL에 대한 설 명으로 틀린것은?",
+    "options": [
+      "A. 자동 Fail-over 기능을 제공합니다.",
+      "B. 최대 5대까지 복제 슬레이브 DB 확장이 가능합니다.",
+      "C. 매일 자동으로 DB백업이 진행되며 데이터는 최대 30일까지 보관됩 니다.",
+      "D. Slow Query를 해결하기 위한 자동화된 튜닝을 제공합니다."
+    ],
+    "answer": "D. Slow Query를 해결하기 위한 자동화된 튜닝을 제공합니다."
+  },
+  {
+    "question": "다음 중，WMS에서 측정 가능한 국가가 아닌 곳은?",
+    "options": [
+      "A. 가나",
+      "B. 미국",
+      "C. 싱가폴",
+      "D. 일본"
+    ],
+    "answer": "A. 가나"
+  },
+  {
+    "question": "현재 네이버클라우드 플랫폼을 통해서 사용할 수 있는 Database Service가 아 닌 것은?",
+    "options": [
+      "A. Cloud DB for ORACLE",
+      "B. PostgreSQL",
+      "C. Cloud DB for MySQL",
+      "D. MariaDB"
+    ],
+    "answer": "A. Cloud DB for ORACLE"
+  },
+  {
+    "question": "Cloud DB for MySQL의 백업 기능에 대해 잘못 설명한 것은?",
+    "options": [
+      "A. 백업 파일은 별도 데이터 스토리지에 저장됩니다.",
+      "B. 사용자가 백업 시간을 설정할 수 없으므로，임의의 시간에 백업이 시작됩니다.",
+      "C. 백업 완료 시점 기준의 데이터로 복구가 가능합니다.",
+      "D. Stand Alone 서버도 DB백 업 및 복구 기능이 사용가능합니다."
+    ],
+    "answer": "B. 사용자가 백업 시간을 설정할 수 없으므로，임의의 시간에 백업이 시작됩니다."
+  },
+  {
+    "question": "210.118.23.45/28 IP 주소의 IP 대역은?",
+    "options": [
+      "A. 210.118.23.1 ~ 210.118.23.62",
+      "B. 210.118.23.1 ~ 210.118.23.254",
+      "C. 210.118.20.1 ~ 210.118.23.254",
+      "D. 210.118.23.32 ~ 210.118.23.47"
+    ],
+    "answer": "D. 210.118.23.32 ~ 210.118.23.47"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 VPC 환경에서의 로드밸런서 상품에 대한 설명으로 잘못된 것을 모두 고르시오.",
+    "options": [
+      "A. Public Subnet에 생성가능하다.",
+      "B. Application 로드밸런서는 Proxy 타입이다.",
+      "C. 부하처 리 성능에 따라 Small / Medium / Large 중 선택할 수 있다.",
+      "D. 성능은 최대 10만 CPS까지 지원한다."
+    ],
+    "answer": "A. Public Subnet에 생성가능하다.\nD. 성능은 최대 10만 CPS까지 지원한다."
+  },
+  {
+    "question": "네이버 클라우드 플랫폼의 VPC 환경에서 ACG에 대한 설명으로 틀린것은 무엇인가요?",
+    "options": [
+      "A. 서버에 연결되어 있는 맵핑 정보를 변경할 수 있다，",
+      "B. VPC에 의존적이다",
+      "C. Write List 방식의 방화벽이다.",
+      "D. Inbound에 대해서만 룰 적용이 가능하다"
+    ],
+    "answer": "D. Inbound에 대해서만 룰 적용이 가능하다"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 VPC 플랫폼의 네트워크 환경에 대한 설명으로 옳은 것을 모두 고르시오.",
+    "options": [
+      "A. 서버 당 할당할 수 있는 공인 IP의 최대 갯수는 2개 이다.",
+      "B. Private Subnet을 이용해서 외부와 단절된 사설 네트워크를 생성할 수 있다.",
+      "C. Private Subnet에서 외부 인터넷으로 연결이 필요한 경우, Internet Gateway을 생성한 후 연동해야한다.",
+      "D. Network Interface의 Secondary IP 기능을 이용하면 HA 솔루션 등에 활용이 가능하다."
+    ],
+    "answer": "B. Private Subnet을 이용해서 외부와 단절된 사설 네트워크를 생성할 수 있다.\nD. Network Interface의 Secondary IP 기능을 이용하면 HA 솔루션 등에 활용이 가능하다."
+  },
+  {
+    "question": "다음 네이버클라우드 플랫폼 VPC 환경에서의 로드밸런서 상품에 대한 설명 중 틀린것은?",
+    "options": [
+      "A. Target Group은 하나 이상의 등록된 대상에 요청을 분배하는데 사용됩니다",
+      "B. Target Group은 Zone과 Subnet에 상관없이 동일 VPC내 모든 대상(서버)을 등록할 수 있습니다.",
+      "C. Target Group은 편의를 위해 존재하는 상품으로，Target Group 생성 없이도 로드 밸런서에 서버를 연결(bind)할 수 있습니다.",
+      "D. Target Group은 등록 대상에 대하여 정의한 헬스체크를 수행합니다."
+    ],
+    "answer": "C. Target Group은 편의를 위해 존재하는 상품으로，Target Group 생성 없이도"
+  },
+  {
+    "question": "로드 밸런서에 서버를 연결(bind)할 수 있습니다. 네이버 클라우드 플랫폼 VOD Transcoder에 대한 설명으로 잘못된 것은?",
+    "options": [
+      "A. 트랜스 코딩된 파일에 캡션 기능을 제공한다.",
+      "B. 변환 필요 파일은 네이버 클라우드 플랫폼 Object Storage에 있어야한다.",
+      "C. 트랜스 코딩된 파일은 잡 생성시 지정한 Object Storage 버킷에 저장된다.",
+      "D. Custom Preset 기능을 제공한다."
+    ],
+    "answer": "A. 트랜스 코딩된 파일에 캡션 기능을 제공한다."
+  },
+  {
+    "question": "IP 주소에 해당되는 MAC Address를 얻기 위한 프로토콜은?",
+    "options": [
+      "A. ARP",
+      "B. TCP",
+      "C. NTP",
+      "D. FTP"
+    ],
+    "answer": "A. ARP"
+  },
+  {
+    "question": "다음 중 솔루션 등에 활용하기 HA 위한 보조 IP 기능을 제공해주는 상품 이름은?",
+    "options": [
+      "A. Network Interface - Secondary IP",
+      "B. Network Interface - HA IP",
+      "C. Server - Secondary IP",
+      "D. Server-HP IP"
+    ],
+    "answer": "A. Network Interface - Secondary IP"
+  },
+  {
+    "question": "다음 Cloud Log Analytics 상품에 대한 설명으로 틀린 것은?",
+    "options": [
+      "A. 데이터는 최대 200GB까지 저장 가능하다.",
+      "B. 로그는 Object Storage로 내보낼 수 있다",
+      "C. 이용하기 위해선 서버에 Agent 설치가 필요하다.",
+      "D. 대시보드를 통해 다양한 데이터를 실시간으로 확인할 수 있다."
+    ],
+    "answer": "A. 데이터는 최대 200GB까지 저장 가능하다."
+  },
+  {
+    "question": "다음 중, Cloud DB for MS_SQL에서 수행가능한 작업이 아닌 것은?",
+    "options": [
+      "A. 재시작 가능",
+      "B. DB Server 삭제",
+      "C. DB Server 일시 정지 기능",
+      "D. Monitoring"
+    ],
+    "answer": "C. DB Server 일시 정지 기능"
+  },
+  {
+    "question": "다음 중，Cloud DB for MS-SQL 대한 설명 중 틀린 것을 고르시오.",
+    "options": [
+      "A. Cloud DB for MSSQL 상품의 경우， Standard type과 High-memory 타입을 선택할 수 있습니다.",
+      "B. 데이터 스토리지는 기본 10GB가 자동 할당되며，10GB 단위로 2TB까지 자동 증가합니다.",
+      "C. Cloud DB for MSSQL 상품은 Standard 타입에서 High-memory 타입으로 스펙업이 가능합니다",
+      "D. Cloud DB for MSSQL 상품은 Standalone으로 생성 시, 서버 가 1 대만 생성됩니다."
+    ],
+    "answer": "C. Cloud DB for MSSQL 상품은 Standard 타입에서 High-memory 타입으로 스펙업이 가능합니다"
+  },
+  {
+    "question": "Cloud DB for MySQL에서 각 DB 서버 들의 역할을 설명한 것 중 옳지 않은 것은?",
+    "options": [
+      "A. Master: 각 DB 서비스의 Master DB 역할을 수행중인 DB Server입니다",
+      "B. Standby Master: 고가용성을 선택할 경우 Master DB 장애시 생성되며 자동으로 Master로 변경됩니다.",
+      "C. Stand Alone : 고가용성을 선 택하지 않을 경 우 Stand Alone으로 1대만 생성되며，장애시 자동 복구 또는 백업을 지원하"
+    ],
+    "answer": "UNKNOWN"
+  },
+  {
+    "question": "NCP 모범 사례에 따른 리소스를 프로비저닝하는데 도움이 되도록 실시간 지침을 제공하는 management 상품은?",
+    "options": [
+      "A. Organization",
+      "B. Cloud Resource Management",
+      "C. NAVER Cloud Advisor",
+      "D. Cloud Advisor"
+    ],
+    "answer": "A. Organization"
+  },
+  {
+    "question": "다음 중 네이버 클라우드 플랫폼 VPC 환경에서의 Cloud DB for Redis 상품에 대한 설명 중 틀린 내용은?",
+    "options": [
+      "A. CPU는 기본 4core로 제공된다.",
+      "B. Cluster 기능이 제공된다.",
+      "C. 자동 Fail-Over 기능이 제공된다.",
+      "D. Stand는 최대 20개까지 구성 가능하다."
+    ],
+    "answer": "D. Stand는 최대 20개까지 구성 가능하다."
+  },
+  {
+    "question": "Cloud DB for MySQL 으로의 접근 방식 에 대한 설 명을 잘못된 것은?",
+    "options": [
+      "A. 포트포워딩을 이용하여 접근",
+      "B. 네이버클라우드 플랫폼 VM에서 Private 도메인 이용하여 접근",
+      "C. SSL VPN을 이용하여 접근",
+      "D. Public 도메인을 이용하여 접근"
+    ],
+    "answer": "A. 포트포워딩을 이용하여 접근"
+  },
+  {
+    "question": "된다.",
+    "options": [
+      "B. 슬레이브 매는 데이터베이스의 읽기부하 분산을 위해 생성하는 복제 DB로 한대 단위로 생성된다.",
+      "C. 기본 제공되는 100GB의 디스크는 운영체제를 위한 디스크로 추가 증설이 가능하고，이용 요금에 포함되지 않음",
+      "D. DB 데이터를 저장하기 위한 데이터 스토리지는 별도로 사용량에 따른 시간 요금으로 과금"
+    ],
+    "answer": "C. 기본 제공되는 100GB의 디스크는 운영체제를 위한 디스크로 추가 증설이 가능하고，이용 요금에 포함되지 않음"
+  },
+  {
+    "question": "URL만 등록하면 웹 페이지 응답 속도 및 정상 동작 여부를 실시간으로 확인할 수 있으며 사용자가 웹 서비스를 이용하는 행동 패턴 을 고려해 시나리오를 작성할 수 있는 네이버 클라우드 플랫폼 서비스는?",
+    "options": [
+      "A. Effective Log Search & Analytics(ELSA)",
+      "B. Network Traffic Monitoring",
+      "C. Web service Monitoring System(WMS)",
+      "D. Real User Analytics(RUA)"
+    ],
+    "answer": "D. Real User Analytics(RUA)"
+  },
+  {
+    "question": "Cloud DB for Redis 상품에서 제공되는 CPU core 개수는?",
+    "options": [
+      "A. 1core",
+      "B. 2core",
+      "C. 3core",
+      "D. 4core"
+    ],
+    "answer": "D. 4core"
+  },
+  {
+    "question": "다음 중，Cloud DB for Redis의 백업 데이터 최대 보관일은?",
+    "options": [
+      "A. 5일",
+      "B. 7일",
+      "C. 10일",
+      "D. 14일"
+    ],
+    "answer": "B. 7일"
+  },
+  {
+    "question": "다음 중，CLA와 연계된 서비스는?",
+    "options": [
+      "A. Object Storage",
+      "B. File Storage",
+      "C. NAS",
+      "D. Block Storage"
+    ],
+    "answer": "A. Object Storage"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 GRM (Global Route Manager) 에 대한 설 명으로 잘못된 것 을 고르시오.",
+    "options": [
+      "A. IP，도메인 리소스에 대한 분기가 가능하다",
+      "B. 도메인 리소스에 대한 헬스체크 설정이 가능하다",
+      "C. 헬스체크에 대한 로그는 제공하지 않는다.",
+      "D. GRM 리소스 타입은 동일하게 설정해야 한다. (IP와 도메인을 같이 GRM에 바인드할 수 없다.)"
+    ],
+    "answer": "B. 도메인 리소스에 대한 헬스체크 설정이 가능하다"
+  },
+  {
+    "question": "TCP/IP에서 인터넷 계층에 속하지 않는 프로토콜은?",
+    "options": [
+      "A. TCP",
+      "B. IPv6",
+      "C. ARP",
+      "D. IPv6"
+    ],
+    "answer": "A. TCP"
+  },
+  {
+    "question": "GRM에서 제공하는 메소드 중 다음이 지칭하는 것을 고르시오. \"사용자의 캐시 DNS 를 기준으로 대륙，혹은 구간 단위 분기가 가능하며，사용자가 직접 CIDR Map 구성도 가 능하다.\"",
+    "options": [
+      "A. Round Robin",
+      "B. Weighted",
+      "C. Source IP hash",
+      "D. GeoLocation"
+    ],
+    "answer": "D. GeoLocation"
+  },
+  {
+    "question": "VOD Transcoder에 대한 설명 중 틀린 것은?",
+    "options": [
+      "A. Preset은 1~5까지 설정 가능하다.",
+      "B. Codec은 H.265만 지원한다.",
+      "C. Thumbnail을 자동생성한다.",
+      "D. Output 경로는 File Storage와 Object Storage에 저장할 수 있다."
+    ],
+    "answer": "B. Codec은 H.265만 지원한다."
+  },
+  {
+    "question": "VOD Job 생성시 Job 상태에 대한 설명으로 올바르지 않은 것은?",
+    "options": [
+      "A. Fail: 정상적으로 Job이 수행되지 않음",
+      "B. Progressing : Job 수행 중",
+      "C. Submitted : Job 수행 완료",
+      "D. Cancel : Submitted 상태였던 Job 수행 취소"
+    ],
+    "answer": "C. Submitted : Job 수행 완료"
+  },
+  {
+    "question": "다음 중 포트 번호와 프로토콜이 잘못 짝 지어진 것은?",
+    "options": [
+      "A. 22 - SSH",
+      "B. 23 - FTP",
+      "C. 53 - DNS",
+      "D. 143 - imap"
+    ],
+    "answer": "B. 23 - FTP"
+  },
+  {
+    "question": "다음의 설명 중 \"이것\"이 지칭하는 상품은? \"이것을 이용하면 네이버 클라우드 플 랫폼 Classic 환경에서 다수 VM에 공인IP를 할 당하지 않고 단일 SNAT IP를 쉐어해서 사용할 수 있다.\"",
+    "options": [
+      "A. 공인 IP",
+      "B. NAT Gateway",
+      "C. CDN+",
+      "D. GRM"
+    ],
+    "answer": "B. NAT Gateway"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 Live Station에 대한 설 명으로 잘못된 것을 고르시오",
+    "options": [
+      "A. Thumbnail 기능을 제공한다.",
+      "B. CDN+(국내 전용) 상품과의 연동만을 지원한다",
+      "C. 채널 유지 비용은 발생하지 않는다.",
+      "D. 라이브 영상을 네이버클라우드 플랫폼 Object Storage에 저장할 수 있다."
+    ],
+    "answer": "C. 채널 유지 비용은 발생하지 않는다."
+  },
+  {
+    "question": "다음 중，WMS에서 '입력한 로그를 포함 하고 있는 모든 로그를 필터링'하고 싶을 때 선택하는 필터링 옵션은?",
+    "options": [
+      "A. url",
+      "B. urlprefix",
+      "C. js",
+      "D. Jsprefix"
+    ],
+    "answer": "B. urlprefix"
+  },
+  {
+    "question": "다음 중 네이버클라우드플랫폼 생성 Cloud DB 시에 자동 생성되거나 설정되는 것이 아닌것은?",
+    "options": [
+      "A. Public 도메인",
+      "B. Private 도메인",
+      "C. ACG",
+      "D. Event History"
+    ],
+    "answer": "A. Public 도메인"
+  },
+  {
+    "question": "다음 중，MS-SQL의 default 접속포트는?",
+    "options": [
+      "A. 1433",
+      "B. 3389",
+      "C. 3306",
+      "D. 6379"
+    ],
+    "answer": "A. 1433"
+  },
+  {
+    "question": "다음 중，CLA (Cloud Log Analytics)에 대한 설명으로 잘못된 것은?",
+    "options": [
+      "A. Cloud DB for MySQL 로그, 아파치 로그등이 템플릿으로 제공됩니다.",
+      "B. 고객의 데이터는 논리적으로 분리된 개별 저장소에 2개 이상의 복제본으로 분산 저장됩니다.",
+      "C. 저장된 데이터가 100GBS 초과하면 최대 30%까지 과거 데이터부터 매일 삭제될 수 있습니다.",
+      "D. 다른 연계상품을 사용하고 있을 경우에는 연계상품이 해지될 때 CLA 데이터가 삭제됩니다."
+    ],
+    "answer": "D. 다른 연계상품을 사용하고 있을 경우에는 연계상품이 해지될 때 CLA 데이터가 삭제됩니다."
+  },
+  {
+    "question": "Cloud DB for MySQL 상품의 백업에 관련된 내용 중 틀린 것은?",
+    "options": [
+      "A. Stand Alone 서버도 DB 백업 에 사용할 수 있습니다.",
+      "B. 기본적인 백업이 하루 한번씩 매일 수행 되며，사용자 설정에 따라 최대 30일까지 보관할 수 있습니다.",
+      "C. backup 파일 복원 요청시 신규 VM이 생성되며，DB 서버는 Recovery 모드로 복원되며 데이터 조회만 가능합니다.",
+      "D. 손쉬운 backup방법은 백업 요청서를 작성하여 신청하고 서버에 Agent를 설치하면 됩니다"
+    ],
+    "answer": "D. 손쉬운 backup방법은 백업 요청서를 작성하여 신청하고 서버에 Agent를"
+  },
+  {
+    "question": "설치하면 됩니다 별도의 설정 없이 클라이언트의 IP를 확인할 수 있는 Load Balancer는 무엇인가?",
+    "options": [
+      "A. Classic Load Balancer",
+      "B. Network Load Balancer",
+      "C. Network Proxy Load Balnacer",
+      "D. Application Load Balancer"
+    ],
+    "answer": "B. Network Load Balancer"
+  },
+  {
+    "question": "다음 중에서 외부와 Private subnet 통신하기 위해 추가 생성이 필요한 서비스는?",
+    "options": [
+      "A. NAT Gateway",
+      "B. VPC Peering",
+      "C. Internet gateway",
+      "D. Network ACL"
+    ],
+    "answer": "A. NAT Gateway"
+  },
+  {
+    "question": "IP주소에 해당하는 MAC Address를 얻기 위한 프로토콜은?",
+    "options": [
+      "A. ARP",
+      "B. TCP",
+      "C. NTP",
+      "D. FTP"
+    ],
+    "answer": "A. ARP"
+  },
+  {
+    "question": "VPC 내에 Public Subnet에 위치시 킬 수 없는 Resource는 무엇인가?",
+    "options": [
+      "A. Cloud DB for MySQL",
+      "B. 베어메탈 서버",
+      "C. GPU 서버",
+      "D. Kubernetes Service"
+    ],
+    "answer": "D. Kubernetes Service"
+  },
+  {
+    "question": "다음 중 프로토콜을 TCP 이용하는 서비스가 아닌것을 고르시오.",
+    "options": [
+      "A. SSH",
+      "B. FTP",
+      "C. NTP",
+      "D. RDP"
+    ],
+    "answer": "C. NTP"
+  },
+  {
+    "question": "다음 중 네이버 클라우드 플랫폼의 Analytics 상품에 해당되지 않는 것은?",
+    "options": [
+      "A. Cloud Data Streaming Service",
+      "B. Cloud Search",
+      "C. Real User Analytics",
+      "D. CAPTCHA"
+    ],
+    "answer": "D. CAPTCHA"
+  },
+  {
+    "question": "Cloud DB for MySQL 설정시 옳지 않은 것은?",
+    "options": [
+      "A. MySQL의 기본 포트 번호(3306)를 사용하는 것은 보안상 취약할 수 있으므로 변경해서 사용하는 것을 권장합니다.",
+      "B. Cloud DB for MySQL 상품에서 DB 서버를 생성하기 위해서는 최초 1회 CLA 상품 사용 동의를 하셔야만 합니다.",
+      "C. DB 백업 파일 보관 기간을 최소 1 일에서 최대 30일까지 선택할 수 있습니다",
+      "D. 백업파일에 대한 별도의 요금은 부과되지 않습니다."
+    ],
+    "answer": "D. 백업파일에 대한 별도의 요금은 부과되지 않습니다."
+  },
+  {
+    "question": "Live Station 에서 Output Protocol이 아닌것은 무엇인가?",
+    "options": [
+      "A. HLS",
+      "B. MPEG-DASH",
+      "C. RTMP",
+      "D. RTSP"
+    ],
+    "answer": "D. RTSP"
+  },
+  {
+    "question": "Cloud DB for MySQL에 대한 설명으로 옳지 않은것은?",
+    "options": [
+      "A. 다양한 유형의 서버타입을 제공하여 서비스 중에 한 번의 재시작만으로 서버 타입을 변경할 수 있습니다.",
+      "B. 네이버 서비스에서 안정성이 검증된 버전을 제공합니다.",
+      "C. 기본 10GB 데이터 스토리지를 제공하며， 10GB 단위로 6TB까지 자동으로 용량이 증가합니다.",
+      "D. 마스터DB가 스탠바이DB로 Fail-over할 때 DNS 방식으로이중화를제공함으로써 어플리케이션의 변경이 필요합니다."
+    ],
+    "answer": "D. 마스터DB가 스탠바이DB로 Fail-over할 때 DNS 방식으로이중화를제공함으로써 어플리케이션의 변경이 필요합니다."
+  },
+  {
+    "question": "다음 중，Cloud DB for MySQL에 제공되는 High-memory 타입의 최고 VM사양은?",
+    "options": [
+      "A. 16vCPU, 128GB",
+      "B. 32vCPU, 128GB",
+      "C. 32vCPU, 256GB",
+      "D. 48vCPU, 256GB"
+    ],
+    "answer": "C. 32vCPU, 256GB"
+  },
+  {
+    "question": "CDN+에 요청된 Log에서 얻을 수 있는 정보를 모두 고르시오.",
+    "options": [
+      "A. 접속한 서버 IP",
+      "B. Client가 요청한 URI",
+      "C. 응답 코드 (2xx, 3xx, 4xx 등)",
+      "D. Cache HiVMiss 정보 (TCP_HIT, TCP_MISS 등)"
+    ],
+    "answer": "A. 접속한 서버 IP\nB. Client가 요청한 URI\nC. 응답 코드 (2xx, 3xx, 4xx 등)\nD. Cache HiVMiss 정보 (TCP_HIT, TCP_MISS 등)"
+  },
+  {
+    "question": "Live Station에서 Input Protocol은 무엇인가?",
+    "options": [
+      "A. HLS",
+      "B. MPEG-DASH",
+      "C. RTMP",
+      "D. RTSP"
+    ],
+    "answer": "C. RTMP"
+  },
+  {
+    "question": "이미지 옵티마이저에서 섬네일 생성 규칙을 만드는 방법은?",
+    "options": [
+      "A. Query String",
+      "B. Post",
+      "C. Get",
+      "D. URL"
+    ],
+    "answer": "A. Query String"
+  },
+  {
+    "question": "CDN서비스의 Access log는 어디에 저장됩니까?",
+    "options": [
+      "A. NAS",
+      "B. Archive Storage",
+      "C. Object Storage",
+      "D. Block Storage"
+    ],
+    "answer": "C. Object Storage"
+  },
+  {
+    "question": "다음 중 Cloud Advisor 상품의 리포트 기능에서 제공하지 않는 점검 항목은?",
+    "options": [
+      "A. NAS 스토리지 ACL 관리",
+      "B. Sub Account의 Access Key 관리",
+      "C. Object Storage 버킷 권한",
+      "D. ACG 포트 관리"
+    ],
+    "answer": "A. NAS 스토리지 ACL 관리"
+  },
+  {
+    "question": "VOD Station 서비스와 연동이 되어 있는 서비스들을 모두 고르시오.",
+    "options": [
+      "A. NAS",
+      "B. Certificate Manager",
+      "C. Object Storage",
+      "D. CDN"
+    ],
+    "answer": "C. Object Storage\nD. CDN"
+  },
+  {
+    "question": "Image Optimizer 있습니다. 사용가능한 필터가 아닌것은 무엇인가 요?",
+    "options": [
+      "A. 샤픈",
+      "B. 블러",
+      "C. 흑백",
+      "D. 파스텔"
+    ],
+    "answer": "D. 파스텔"
+  },
+  {
+    "question": "VOD Transcoder에 대한 설명 중 틀린 것은?",
+    "options": [
+      "A. Video Codec은 H.264, 265가 지원된다",
+      "B. Audio Codec은 AAC 이다",
+      "C. 최대 해상도는 720P 이다.",
+      "D. Frame rate는 60까지 지원한다"
+    ],
+    "answer": "C. 최대 해상도는 720P 이다."
+  },
+  {
+    "question": "타 계정과 VPC Peering시 필요한 정보가 아닌 것은 무엇인가?",
+    "options": [
+      "A. 로그인 ID",
+      "B. VPC ID",
+      "C. VPC명",
+      "D. VPC 네트웍 주소"
+    ],
+    "answer": "D. VPC 네트웍 주소"
+  },
+  {
+    "question": "다음 중 Real User Analytics 상품에 대한 설명으로 틀린 것은?",
+    "options": [
+      "A. 대시보드를 통해 최근 300분 이내 발생한 정보 확인이 가능하다.",
+      "B. 데이터 수집을 위해서는 RUA 에서 제공하는 수집코드를 개발코드에 삽입해야 한다.",
+      "C. 프로젝트 단위로 생성이 가능하다.",
+      "D. 대시보드를 통해 직관적인 확인이 가능하다."
+    ],
+    "answer": "A. 대시보드를 통해 최근 300분 이내 발생한 정보 확인이 가능하다."
+  },
+  {
+    "question": "VOD Station 상품에서 제공되는 DRM 기능과 관련된 설명으로 틀린 것은?",
+    "options": [
+      "A. 동영상 파일을 암호화 할 때 사용하는 기술이다.",
+      "B. VOD Station 에서는 자체 DRM 기능을 제공한다.",
+      "C. 불법 다운로드 리스크를 줄일 수 있다.",
+      "D. 3 가지 유형이 제공된다"
+    ],
+    "answer": "B. VOD Station 에서는 자체 DRM 기능을 제공한다."
+  },
+  {
+    "question": "다음과 같이 서브넷을 192.168.31.0/23 을 만들었다. 그렇다면 IP 주소 대역은 어떻게 되는가?",
+    "options": [
+      "A. 192.168.31.0 ~ 192.168.31.255",
+      "B. 192.168.30.0 ~ 192.168.31.255",
+      "C. 192.168.31.0 ~ 192.168.32.255",
+      "D. 192.168.0.0 - 192.168.255.255"
+    ],
+    "answer": "B. 192.168.30.0 ~ 192.168.31.255"
+  },
+  {
+    "question": "L7 헬스 체크 기능을 지원하지 않는 로드밸런서 타입은 무엇인가?",
+    "options": [
+      "A. Classic Load Balancer",
+      "B. Network Load Balancer",
+      "C. Network Proxy Load Balancer",
+      "D. Application Load Balancer"
+    ],
+    "answer": "B. Network Load Balancer"
+  },
+  {
+    "question": "이더넷에서 MTU 의 최대사이즈는 몇 바이트인가?",
+    "options": [
+      "A. 256",
+      "B. 1024",
+      "C. 1500",
+      "D. 64000"
+    ],
+    "answer": "C. 1500"
+  },
+  {
+    "question": "Live Station 상품에서는 다른 플랫콤에 동시 송출을 할 수 있는 기능이 제공됩니다. 이때 해당 기능을 부르는 명칭은 무엇인가요?",
+    "options": [
+      "A. Re-stream",
+      "B. Re-Play",
+      "C. Re-Wind",
+      "D. Re-Watch"
+    ],
+    "answer": "A. Re-stream"
+  },
+  {
+    "question": "VPC 플랫폼 로드밸런서에서 지원하는 프로토콜의 연결 관계가 잘못 짝지어진 것은 무엇인가?",
+    "options": [
+      "A. TCP - Network Load Balancer",
+      "B. Proxy TCP -Network Proxy Load Balancer",
+      "C. HTTP - Network Load Balancer",
+      "D. HTTPS - Application Load Balancer"
+    ],
+    "answer": "C. HTTP - Network Load Balancer"
+  },
+  {
+    "question": "Live Station 에서 Output Protocol 이 아닌 것은 무엇인가?",
+    "options": [
+      "A. HLS",
+      "B. MPEG-DASH",
+      "C. RTMP",
+      "D. RTSP"
+    ],
+    "answer": "D. RTSP"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 GRM 에 대한 설명으로 잘못된 것을 고르시오",
+    "options": [
+      "A. IP 도메인 리소스에 대한 분기가 가능하다",
+      "B. 도메인 리소스에 대한 헬스체크 설정이 가능하다.",
+      "C. 헬스체크에 대한 로그는 제공하지 않는다.",
+      "D. GRM 리소스 타입은 동일하게 설정해야 한다.（IP 와 도메인을 같이 GRM 에 바인드할 수 없다.）"
+    ],
+    "answer": "B. 도메인 리소스에 대한 헬스체크 설정이 가능하다."
+  },
+  {
+    "question": "다음 중 서비스에서 콘텐츠에 CDN 대한 접근을 제한할 수 있는 것을 고르시오,",
+    "options": [
+      "A. Ignore Query String",
+      "B. referrer Domain",
+      "C. BYPASS",
+      "D. Secure-Token"
+    ],
+    "answer": "D. Secure-Token"
+  },
+  {
+    "question": "VOD Transcoder 에 대한설명중틀린것은?",
+    "options": [
+      "A. preset 은 1-5 까지 설정 가능하다.",
+      "B. Codec 은 H.264 만 지원한다.",
+      "C. Thumbnail 을 자동생성한다.",
+      "D. Output 경로는 File Storage 와 Object Storage 에 저장할 수 있다."
+    ],
+    "answer": "B. Codec 은 H.264 만 지원한다."
+  },
+  {
+    "question": "다음 중 ACG 와 Network ACL 의 설명 중 잘못된 것을 모두 고르시오",
+    "options": [
+      "A. Network ACL과 ACG 모두 Inbound/outbound 룰에 대해 설정이 가능하다.",
+      "B. ACG 는 서버 당 4 개가 적용 가능하다",
+      "C. ACG 는 Defualt 로 All deny 이나 Network ACL 은 All Permit 이다",
+      "D. Network ACL 은 서버 NIC 단위로 적용되나, ACG 는 Subnet 단위로 적용된다."
+    ],
+    "answer": "B. ACG 는 서버 당 4 개가 적용 가능하다\nD. Network ACL 은 서버 NIC 단위로 적용되나, ACG 는 Subnet 단위로 적용된다."
+  },
+  {
+    "question": "경로 기반 라우팅 기능을 지원하는 Load Balancer 는 무엇인가?",
+    "options": [
+      "A. Classic Load Balancer",
+      "B. Network Load Balancer",
+      "C. Network Proxy Load Balancer",
+      "D. Application Load Balancer"
+    ],
+    "answer": "D. Application Load Balancer"
+  },
+  {
+    "question": "다음 네 개의 상품 중 세 개의 상품은 네이버클라우드 플랫폼의 네트워크망과 외부 망간의 통신을 필요로 할 때 사용됩니다. 나머지 이질적 인 상품 하나는 무엇인가요?",
+    "options": [
+      "A. Cloud Connect",
+      "B. Cloud Insight",
+      "C. IPSEC VPN",
+      "D. SSL VPN"
+    ],
+    "answer": "B. Cloud Insight"
+  },
+  {
+    "question": "다음 중 로드밸런서의 Target group에 대한 설명중 옳은 것을 모두 고르시오",
+    "options": [
+      "A. 한대의 서버는 하나의 Target group 에만 속 할 수 있다.",
+      "B. 하나의 Target group 은 하나의 로드밸런서에 만 할당이 가능하다.",
+      "C. 로드밸런서 생성 후 Target group 을 수정할 수 있다.",
+      "D. Target Group 은 Zone 과 Subnet 에 상관없이 동일 VPC 내 모든 대상(서버)을 등록할 수 있습니다."
+    ],
+    "answer": "B. 하나의 Target group 은 하나의 로드밸런서에 만 할당이 가능하다.\nC. 로드밸런서 생성 후 Target group 을 수정할 수 있다.\nD. Target Group 은 Zone 과 Subnet 에 상관없이 동일 VPC 내 모든 대상(서버)을 등록할 수 있습니다."
+  },
+  {
+    "question": "Certificate Manager와 연동이 가능한 서비스를 모두 고르시오.",
+    "options": [
+      "A. Load-balancer",
+      "B. CDN",
+      "C. Global Route Manager",
+      "D. VPC"
+    ],
+    "answer": "A. Load-balancer\nB. CDN"
+  },
+  {
+    "question": "Image Optimizer 상품에 대한 설명으로 틀린것은?",
+    "options": [
+      "A. Cloud Log Analytics 상품과의 연동이 필수 이다.",
+      "B. 변환 Rule 의 경우 실제 적용되기 까지 약간의 시간이 소요된다.",
+      "C. 변환 Rule 은 엑셀파일을 통해 다량으로 불러 올 수 있다.",
+      "D. 변환된 이미지 미리보기 기능은 제공되지 않는다."
+    ],
+    "answer": "D. 변환된 이미지 미리보기 기능은 제공되지 않는다."
+  },
+  {
+    "question": "별도의 설정 없이 클라이언트의 IP 를 확인할 수 있는 Load Balancer 는 무엇인가?",
+    "options": [
+      "A. Classic Load Balancer",
+      "B. Network Load Balancer",
+      "C. Network Proxy Load Balancer",
+      "D. Application Load Balancer"
+    ],
+    "answer": "B. Network Load Balancer"
+  },
+  {
+    "question": "하나의 VPC 에 ACG 를 최대 몇 개 까지 생성 가능한가요?",
+    "options": [
+      "A. 5개",
+      "B. 100개",
+      "C. 300개",
+      "D. 500개"
+    ],
+    "answer": "D. 500개"
+  },
+  {
+    "question": "다음의 설명이 지칭하는 용어는? \"CDN 캐시 서버（엣지서버）에서 케싱된 데이터를 지우는 기능\"",
+    "options": [
+      "A. HIT",
+      "B. Streaming",
+      "C. Purge",
+      "D. Cache Expiry"
+    ],
+    "answer": "C. Purge"
+  },
+  {
+    "question": "Video Player 에서 설정 가능한 기능이 아닌 것은 무엇인가?",
+    "options": [
+      "A. 재생 속도 조절",
+      "B. 브라우저 최소화시 자동 정지",
+      "C. 자막지원",
+      "D. 영상 다운로드"
+    ],
+    "answer": "D. 영상 다운로드"
+  },
+  {
+    "question": "CDN 서비스에서 캐싱된 콘텐츠가 원본 서버 에 변경되었는지 여부를 확인하는 주기를 지정하는 것은?",
+    "options": [
+      "A. referrer",
+      "B. Secure Token",
+      "C. Purge",
+      "D. Cashing Expiry"
+    ],
+    "answer": "D. Cashing Expiry"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 로드밸런서에서 제공 하는 밸런싱 매소드 중 다음이 지칭하는 것을 고르시오. \"정적 해쉬 테이블에 있는 소스 ᅵP 를 찾아 실제 서버의 풀로 요청을 배분하는 방식\"",
+    "options": [
+      "A. Round-Robin",
+      "B. Weighted",
+      "C. Least-Connection",
+      "D. Source IP hash"
+    ],
+    "answer": "D. Source IP hash"
+  },
+  {
+    "question": "네이버클라우드 CDN +에 대한 설명으로 잘못된 것을 고르시오",
+    "options": [
+      "A. 오리진으로 네이버 클라우드 플랫폼의 Object Storage만 사용할 수 없다.",
+      "B. 국내 서비스에 최적화된 CDN 상품이다.",
+      "C. 개인 소장 도메인을 CDN 서비스 도메인으로 사용할 수 있다.",
+      "D. CDN 도메인을 HTTPS 로 사용하기 위해서는 오리진에서도 HTTPS 를 지원해야 한다."
+    ],
+    "answer": "A. 오리진으로 네이버 클라우드 플랫폼의 Object Storage만 사용할 수 없다."
+  },
+  {
+    "question": "다음 중 포트번호와 서비스가 잘못 연결된 것 을 고르시오.",
+    "options": [
+      "A. SSH - 22",
+      "B. Telnet - 23",
+      "C. DNS - 53",
+      "D. IMAP - 93"
+    ],
+    "answer": "D. IMAP - 93"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 Live Station 에 대한 설명으로 잘못된 것을 고르시오",
+    "options": [
+      "A. Thumbnail 기능을 제공한다",
+      "B. CDN +（국내 전용） 상품과의 연동만을 지원한다.",
+      "C. 채널 유지 비용은 발생하지 않는다.",
+      "D. 라이브 영상을 네이버클라우드 플랫폼 Object Storage 에 저장할 수 있다."
+    ],
+    "answer": "C. 채널 유지 비용은 발생하지 않는다."
+  },
+  {
+    "question": "각 계정 당 생성할 수 있는 VPC 갯수는?",
+    "options": [
+      "A. 3개",
+      "B. 4개",
+      "C. 5개",
+      "D. 6개"
+    ],
+    "answer": "A. 3개"
+  },
+  {
+    "question": "다음의 설명 중 \"이것\"이 지칭하는 상품은? \"이것을 이용하면 네이버 클라우드 플랫폼 Classic 환경에서 다수 VM 에 공인 IP 를 할당하지 않고 단일 SNAT IP 를 쉐어해서 사용할 수 있다.\"",
+    "options": [
+      "A. 공인 IP",
+      "B. NAT Gateway",
+      "C. CDN +",
+      "D. GRM"
+    ],
+    "answer": "B. NAT Gateway"
+  },
+  {
+    "question": "VPC 생성시 생성 가능한 IP 주소 범위가 아닌 것은 무엇인가?",
+    "options": [
+      "A. 10.0.0.0/12",
+      "B. 192.168.0.0/24",
+      "C. 192.168.0.0/12",
+      "D. 172.168.0.0/16"
+    ],
+    "answer": "A. 10.0.0.0/12\nC. 192.168.0.0/12"
+  },
+  {
+    "question": "다음 중, Cloud DB for MS-SQL 대한 설명 중 틀린 것을 고르시오",
+    "options": [
+      "A. Cloud DB for MSSQL 상품의 경우, Standard type 과 High-memory 타입을 선택할 수 있습니다.",
+      "B. 데이터스토리지는 기본 10GB가 자동 할당되 며, 10GB 단위로 2TB 까지 자동 증가합니다.",
+      "C. Cloud DB for MSSQL 상품은 Standard 타입 에서 High-memory 타입으로 스팩입이 가능합니다.",
+      "D. Cloud DB for MSSQL 상품은 Standalone 으 로 생성 시, 서버가 1 대만 생성됩니다."
+    ],
+    "answer": "C. Cloud DB for MSSQL 상품은 Standard 타입 에서 High-memory 타입으로 스팩입이 가능합니다."
+  },
+  {
+    "question": "다음 중, WMS 에서 '입력한 로그를 포함하고 있는 모든 로그를 필터링'하고 싶을 때 선택하는 필터링 옵션은?",
+    "options": [
+      "A. url",
+      "B. url prefix",
+      "C. js",
+      "D. Jsprefix"
+    ],
+    "answer": "B. url prefix"
+  },
+  {
+    "question": "다음 중, Cloud DB for MS-SQL에서 수행 가능한 작업이 아닌 것은?",
+    "options": [
+      "A. 재시작 기능",
+      "B. DB Server 삭제",
+      "C. DB Server 일시 정지 기능",
+      "D. Monitoring"
+    ],
+    "answer": "C. DB Server 일시 정지 기능"
+  },
+  {
+    "question": "다음 Cloud DB for MSSQL 상품의 Slave DB 에 대한 설명으로 틀린 내용은?",
+    "options": [
+      "A. Slave DB 는 log shipping 방식으로 생성된다.",
+      "B. 읽기 기능 시간을 최대 20 시간까지 설정 가능 하다",
+      "C. Slave DB의 스펙을 변경해도, Principal 및 Mirror 서버의 스펙은 변경되지 않는다.",
+      "D. Slave DB 는 Bl 및 Batch 성 작업에 적합하다."
+    ],
+    "answer": "C. Slave DB의 스펙을 변경해도, Principal 및 Mirror 서버의 스펙은 변경되지 않는다."
+  },
+  {
+    "question": "다음 중 Cloud Insight 상품에 대한 내용으로 올바르지 않은 것은?",
+    "options": [
+      "A. 감시대상에 대해 알람을 받을 수 있다.",
+      "B. 감시대상 상품은 VPC 와 Classic 플랫폼이 상이하다.",
+      "C. 사용자가 별도로 agent 설치를 해야한다.",
+      "D. Notification Recipient 메뉴를 통해 통보 대상자를 생성할 수 있다."
+    ],
+    "answer": "C. 사용자가 별도로 agent 설치를 해야한다."
+  },
+  {
+    "question": "다음 중 ELSA(Effective Log Search & Analytics) 상품에 대한 설명으로 틀린 것은?",
+    "options": [
+      "A. Mobile App Crash 정보를 쉽게 파악할 수 있게 도와준다",
+      "B. Log Search 항목에서는 로그 수집 정보를 그래프로 확인할 수 있다.",
+      "C. 실시간으로 발생하는 로그를 수집할 수 있다.",
+      "D. 수집된 데이터는 60 일 후 삭제된다."
+    ],
+    "answer": "D. 수집된 데이터는 60 일 후 삭제된다."
+  },
+  {
+    "question": "NCP 모범 사례에 따라 리소스를 프로비저닝 하는 데 도움이 되도록 실시간 지침을 제공하는 management 상품은?",
+    "options": [
+      "A. Organization",
+      "B. Cloud Resource Management",
+      "C. NAVER Cloud Advisor",
+      "D. Cloud Advisor"
+    ],
+    "answer": "D. Cloud Advisor"
+  },
+  {
+    "question": "Cloud DB for MySQL 서버 접근 관련 내용중 틀린 것은?",
+    "options": [
+      "A. SSL VPN 상품을 사용하면 local PC 에 Client 를 설치하여 DB 서버로 접근할 수 있다.",
+      "B. 사용자가 할당 받은 DB 전용 Private Domain 을 사용하면 NCP 외부에서도 DB 서버로 접근할 수 있다.",
+      "C. 외부 에서 통신하는 데이터는 네트워크사용량으로 과금된다.",
+      "D. DB 접근을 위해 ACG 에 접근소스와 허용할 포트를 정의해야 한다."
+    ],
+    "answer": "A. SSL VPN 상품을 사용하면 local PC 에 Client 를 설치하여 DB 서버로 접근할 수 있다."
+  },
+  {
+    "question": "다음 중 CLA 와 자동으로 연계된 서비스가 아닌것은?",
+    "options": [
+      "A. server",
+      "B. Cloud DB",
+      "C. Image Optimizer",
+      "D. Object Storage"
+    ],
+    "answer": "A. server"
+  },
+  {
+    "question": "회사 정책상 클라우드에서 발생하는 로그를 영구보관해야한다 . 이럴 경우, CLA 에 설정해줘야 하는 옵션은?",
+    "options": [
+      "A. Log expanslon 를 통해 Object storage 상에 로그가 저장될 수 있도록 설정",
+      "B. Archive Log 를 통해 Object storage 상에 로그가 저장될 수 있도록 설정",
+      "C. Export Log 를 통해 Object storage 상에 로그가 저장될 수 있도록 설정",
+      "D. Lof stone 를 통해 Object storage 상에 로그가 저장될 수 있도록 설정"
+    ],
+    "answer": "C. Export Log 를 통해 Object storage 상에 로그가 저장될 수 있도록 설정"
+  },
+  {
+    "question": "다음 중 네이버 클라우드 플랫폼의 DB 서버의 특징으로 올바르지 않은 것은?",
+    "options": [
+      "A. 설치형 DB 의 경우 클릭 한번으로 HA 구성이 가능하다",
+      "B. CDB for MySQL 은 스토리지 용량이 최대 6TB 까지 자동 증설된다.",
+      "C. CDB for MSSQL 의 경우 스토리지 용량이 최대 2TB 까지 자동 증설된다.",
+      "D. CDB 상품은 자체 백업 기능을 제공한다."
+    ],
+    "answer": "A. 설치형 DB 의 경우 클릭 한번으로 HA 구성이 가능하다"
+  },
+  {
+    "question": "서브 계정들이 작업한 내역을 볼 수 있는 서비스는?",
+    "options": [
+      "A. Cloud Activity Tracer",
+      "B. Account Tracer",
+      "C. Cloud Activity Analytics",
+      "D. Cloud Log Analytics"
+    ],
+    "answer": "A. Cloud Activity Tracer"
+  },
+  {
+    "question": "모든 계정의 비용을 통합 결제하고, 모든 계정의 비용을 중앙에서 확인할 수 있으며, 계정별로 이용 가능한 상품과 그 한도를 정책으 로 만들어 관리할 수 있도록 도와주는 상품은?",
+    "options": [
+      "A. Organization",
+      "B. Sub Account",
+      "C. Cloud Log Analytics",
+      "D. Cloud Account Management"
+    ],
+    "answer": "A. Organization"
+  },
+  {
+    "question": "다음 중, CLA (Cloud Log Analytics)에 대한 설명으로 잘못된 것은?",
+    "options": [
+      "A. Cloud DB for MySQL 로그, 아파치 로그 등 이 템플릿으로 제공됩니다.",
+      "B. 고객의 데이터는 논리적으로 분리된 개별 저장 소에 2 개 이상의 복제본으로 분산 저장됩니다.",
+      "C. 저장된 데이터가 100GB 를 초과하면 최대 30%까지 과거 데이터부터 매일 삭제될 수 있습니",
+      "D. 다른 연계상품을 사용하고 있을 경우에는 연계상품이 해지될 때 CLA 데이터가 삭제됩니다."
+    ],
+    "answer": "D. 다른 연계상품을 사용하고 있을 경우에는 연계상품이 해지될 때 CLA 데이터가 삭제됩니다."
+  },
+  {
+    "question": "다음과 같이 서브넷 10.0.0.0/15 을 만들었다. 그렇다면 IP 주소 대역은 어떻게 되는가?",
+    "options": [
+      "A. 10.0.0.0 ~ 10.255.255.255",
+      "B. 10.0.0.0 ~ 10.0.255.255",
+      "C. 10.0.0.0 ~ 10.1.255.255",
+      "D. 10.0.0.0 ~ 10.7.255.255"
+    ],
+    "answer": "C. 10.0.0.0 ~ 10.1.255.255"
+  },
+  {
+    "question": "Application Load Balancer 에서 URL 기반으로 분기하기 위한 조건은 무엇인가?",
+    "options": [
+      "A. Host Header",
+      "B. Path Pattern",
+      "C. URL Path",
+      "D. URL 라우팅"
+    ],
+    "answer": "B. Path Pattern"
+  },
+  {
+    "question": "Live station Storage 에서 원본 영상을 별도 파일로 Storage에 저장하여 보관 할 수 있으며 , 현재 라이브중인 영상을 최대 여섯시간전까지 되돌려볼 수 있는 기능을 사용하기 위해 설정해줘야 하는 옵션은?",
+    "options": [
+      "A. 즉시 녹화 설정",
+      "B. Recording",
+      "C. Stream",
+      "D. DVR 설정"
+    ],
+    "answer": "B. Recording"
+  },
+  {
+    "question": "GRM 의 로드밸렁싱 타입 중, 각 리소스별로 가중치를 주어 요청에 대한 트래픽을 분산하는 방식은?",
+    "options": [
+      "A. GeoLocation",
+      "B. Round-robin",
+      "C. Weighted",
+      "D. Fail Over"
+    ],
+    "answer": "C. Weighted"
+  },
+  {
+    "question": "VPC 생성시 생성 가능한 IP 주소 범위가 아닌 것은 무엇인가?",
+    "options": [
+      "A. 10.0.0.0/8",
+      "B. 127.0.0.0/8",
+      "C. 172.16.0.0/12",
+      "D. 192.168.0.0/16"
+    ],
+    "answer": "B. 127.0.0.0/8"
+  },
+  {
+    "question": "다음 중, 로드밸런서에 SSL 인증서를 추가하기 위해 연동해야 하는 서비스는?",
+    "options": [
+      "A. SSL Manager",
+      "B. Certificate Manager",
+      "C. SSL-Offload",
+      "D. Global certificate"
+    ],
+    "answer": "B. Certificate Manager"
+  },
+  {
+    "question": "다음 중 VPC 플랫폼 기반 Cloud Hadoop 상품의 특징으로 올바른 설명은?",
+    "options": [
+      "A. 컴퓨팅 노드와 스토리지 노드가 분리되어 제공된다.",
+      "B. 기본 저장소로 NAS Storage 가 제공된다.",
+      "C. 고가용성은 지원되지 않는다",
+      "D. 작업자노드는 최대 4 대까지 생성 가능하다"
+    ],
+    "answer": "A. 컴퓨팅 노드와 스토리지 노드가 분리되어 제공된다."
+  },
+  {
+    "question": "다음 Cloud DB for Redis 상품에 대한 설명으로 올바른 것은?",
+    "options": [
+      "A. 최근 8주 이내의 모니터링 지표를 확인할 수 있다.",
+      "B. OS Dashboard 는 지원되지 않는다",
+      "C. 백업 기능을 이용하기 위해서는 상품 이용 신청서를 작성해야 한다",
+      "D. 백업은 매일 1 번씩 진행되며, 최대 7 일까지 보관이 가능하다"
+    ],
+    "answer": "D. 백업은 매일 1 번씩 진행되며, 최대 7 일까지 보관이 가능하다"
+  },
+  {
+    "question": "다음 중 WMS 상품에 대한 내용으로 올바른 것은?",
+    "options": [
+      "A. 알람 기능은 제공되지 않는다.",
+      "B. 웨일 브라우저 기반의 테스트만 가능하다",
+      "C. 여러 국가에서의 웹 서비스 응답 속도를 확인 할 수 있다.",
+      "D. 모니터링은 초 단위로 가능하다."
+    ],
+    "answer": "B. 웨일 브라우저 기반의 테스트만 가능하다"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 Hadoop Cluster에 포함되지 않은 컴포넌트는 무엇인가요?",
+    "options": [
+      "A. HDFS",
+      "B. PRESTO",
+      "C. TAJO",
+      "D. RAMGER"
+    ],
+    "answer": "C. TAJO"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 Hadoop Cluster에 포함된 웹 기반의 관리도구는 무엇인가요?",
+    "options": [
+      "A. Hive",
+      "B. Spark",
+      "C. Ambar",
+      "D. Hue"
+    ],
+    "answer": "C. Ambar"
+  },
+  {
+    "question": "VPC 환경에서 Cloud DB 상품을 이용할 시 갖는 특징으로 올바르지 않은것은?",
+    "options": [
+      "A. 멀티 존 기능이 지원된다.",
+      "B. 멀티 리전 기능이 제공된다.",
+      "C. Private Subnet 에 생성 시 Public 도메인 생성이 불가능하다.",
+      "D. ACG 가 자동으로 생성된다"
+    ],
+    "answer": "B. 멀티 리전 기능이 제공된다."
+  },
+  {
+    "question": "Cloud DB for MySQL 설명으로 틀린 것은?",
+    "options": [
+      "A. DB 서버의 기본 생성 대수는 고가용성 선택 여부에 따라 달라진다.",
+      "B. 고가용성 선택 시 기본 2 대의 DB 서버가 생성된다.",
+      "C. Standby Master DB 는 평상 시에는 동기화 작업외에 다른 용도로 사용 불가하다.",
+      "D. DB 서버의 스펙의 변경 시, 마스터 데이터베이스의 스펙만 변경된다."
+    ],
+    "answer": "D. DB 서버의 스펙의 변경 시, 마스터 데이터베이스의 스펙만 변경된다."
+  },
+  {
+    "question": "다음 중 Cloud Log Analytics 상품에 대한 설명으로 틀린 것은?",
+    "options": [
+      "A. 시스템의 로그를 수집하고 분석할 수 있도록 도와주는 상품이다",
+      "B. 네이버 클라우드 플랫폼에서 제공되는 특정 템플릿 로그에 한해 수집이 가능하다",
+      "C. Custom Log 기능을 통해 사용자가 원하는 로그를 지정하여 수집할 수 있다.",
+      "D. 고객의 데이터는 논리적으로 분리된 개별 저장소에 2 개 이상의 복제본으로 분산 저장된다."
+    ],
+    "answer": "B. 네이버 클라우드 플랫폼에서 제공되는 특정 템플릿 로그에 한해 수집이 가능하다"
+  },
+  {
+    "question": "다음 중 Sub Account 상품에 대한 설명으로 올바르지 않은 것은?",
+    "options": [
+      "A. 다수의 사용자가 동일한 인프라를 이용해야 할 때 사용한다.",
+      "B. 서브계정은 스스로 API Key 발급이 불가능하다.",
+      "C. 2차인증 설정이 가능하다.",
+      "D. 비밀번호 만료일 설정이 가능하다."
+    ],
+    "answer": "D. 비밀번호 만료일 설정이 가능하다."
+  },
+  {
+    "question": "네이버 클라우드 플랫폼의 운영 노하우를 바탕으로 도출한 자체 모범 사례와 사용자의 이용 내용을 비교 분석하여 좀 더 안전하고 효율적인 서비스가 가능하도록 지원하는 서비스는?",
+    "options": [
+      "A. Cloud Consultant",
+      "B. Cloud Advisor",
+      "C. Cloud Tip",
+      "D. Cloud Analysis"
+    ],
+    "answer": "B. Cloud Advisor"
+  },
+  {
+    "question": "다음 Cloud DB for Redis 상품에 대한 설명으로 올바른 것은?",
+    "options": [
+      "A. 최근 8 주 이내의 모니터링 지표를 확인할 수 있다.",
+      "B. OS Dashboard 는 지원되지 않는다.",
+      "C. 백업 기능을 이용하기 위해서는 상품 이용 신청서를 작성해야 한다.",
+      "D. 백업은 매일 1 번씩 진행되며, 최대 7 일까지 보관이 가능하다"
+    ],
+    "answer": "D. 백업은 매일 1 번씩 진행되며, 최대 7 일까지 보관이 가능하다"
+  },
+  {
+    "question": "다음 WMS Monitoring 지표와 관련된 단어들 중, 올바른 뜻풀이가 아닌 것은?",
+    "options": [
+      "A. Load Time: 웹페이지를 로딩하는데 걸리는 시간",
+      "B. File Requests: 업로드한 구성요소들의 목록",
+      "C. Scenario: 테스트 시나리오 내용",
+      "D. Today Event: 테스트 URL 에서 금일 발생한 이벤트 수"
+    ],
+    "answer": "C. Scenario: 테스트 시나리오 내용"
+  },
+  {
+    "question": "다음 중 Live station 에 대한 설명 중 옳은 것을 모두 고르시오",
+    "options": [
+      "A. Output Protocol 은 기본 HLS & DASH 프로토콜로 지정된다.",
+      "B. Live Station 은 반드시 CDN 과 함께 사용되야 한다.",
+      "C. Custom 화질을 지정할 수 있는 기능은 추후 제공될 예정이다.",
+      "D. 채널이 생성 중인 상태는 '준비'상태로 콘솔에 표기된다."
+    ],
+    "answer": "A. Output Protocol 은 기본 HLS & DASH 프로토콜로 지정된다.\nD. 채널이 생성 중인 상태는 '준비'상태로 콘솔에 표기된다."
+  },
+  {
+    "question": "VPC 플랫폼에서 로드밸런서 생성시 Small,Medium, Large 성능을 선택할 수 있습니다. 성능의 기준은 무엇인가요?",
+    "options": [
+      "A. 네트웍 대역폭 (bps)",
+      "B. 초당 연결 수 (CPS)",
+      "C. 초당 패킷 수 (PPS)",
+      "D. 리얼서버 대수"
+    ],
+    "answer": "B. 초당 연결 수 (CPS)"
+  },
+  {
+    "question": "CDN 서비스에서 원본으로 설정이 가능한 스토리지는?",
+    "options": [
+      "A. Archive Storage",
+      "B. Object Storage",
+      "C. Block Storage",
+      "D. NAS"
+    ],
+    "answer": "B. Object Storage"
+  },
+  {
+    "question": "다음 중, 네이버클라우드 플랫폼의 로드밸런서 생성시 기본적으로 적용되는 분배 알고리 즘은?",
+    "options": [
+      "A. Least-connection",
+      "B. SourceIP Hash",
+      "C. Round-robin",
+      "D. Weighted"
+    ],
+    "answer": "C. Round-robin"
+  },
+  {
+    "question": "VOD Station 상품에 대한 설명으로 틀린 것 은?",
+    "options": [
+      "A. DRM 기능이 제공된다",
+      "B. Media Encryption 기능이 제공된다.",
+      "C. 송출할 영상 파일은 NAS 에 올려야 한다.",
+      "D. HLS, DASH 프로토콜을 지원한다."
+    ],
+    "answer": "A. DRM 기능이 제공된다"
+  },
+  {
+    "question": "CDN 서비스에서 접속자가 요청한 콘텐츠가 유효한 형태로, CDN 캐시 서버에 있어 접속 자의 요청에 대해서 바로 응답할 때의 상 태를 의미하는 것은?",
+    "options": [
+      "A. MISS",
+      "B. HIT",
+      "C. BYPASS",
+      "D. Purge"
+    ],
+    "answer": "B. HIT"
+  },
+  {
+    "question": "VPC 환경에서의 Network Interface 에 대한 설명으로 틀린 것은?",
+    "options": [
+      "A. 서버 생성시, 최대 3 개의 Network Interface 생성이 가능하다",
+      "B. 각 NIC 에는 Secondary IP 를 부여할 수 있다.",
+      "C. 하나의 NIC 에는 최대 3 개의 Secondary IP 를 추가할 수 있다.",
+      "D. 실제 Secondary IP 활성화를 위해서는 network script 를 일부 수정해야 한다"
+    ],
+    "answer": "C. 하나의 NIC 에는 최대 3 개의 Secondary IP 를 추가할 수 있다."
+  },
+  {
+    "question": "VOD Station 에서 Subtitle Output format 은 무엇인가?",
+    "options": [
+      "A. VTT",
+      "B. SRT",
+      "C. TTML",
+      "D. CAP"
+    ],
+    "answer": "A. VTT"
+  },
+  {
+    "question": "VOD Transcoder 를 통해 만들어진 영상의파일 확장자는 무엇인가?",
+    "options": [
+      "A. AVI",
+      "B. MP4",
+      "C. MOV",
+      "D. WMV"
+    ],
+    "answer": "B. MP4"
+  },
+  {
+    "question": "HTTP 2.0 기능을 지원하는 Load Balancer 는 무엇인가?",
+    "options": [
+      "A. Classic Load Balancer",
+      "B. Network Load Balancer",
+      "C. Network Proxy Load Balancer",
+      "D. Application Load Balancer"
+    ],
+    "answer": "D. Application Load Balancer"
+  },
+  {
+    "question": "Cloud Insight 에 대한 설명 중 잘못 된 것을 모두 고르시오.",
+    "options": [
+      "A. 선택한 메트릭에 대한 알람 레벨은 info,waring 으로 설정이 가능하다.",
+      "B. 서버와 관련된 메트릭을 수집하기 위해선 에이전트 설치가 필요하다.",
+      "C. 실제 에이전트가 잘 동작하는지 확인하기 위해서 Linux 에서는 ps -ef | grep agent 명령어로 확인이 가능하다.",
+      "D. 통보 알람 기능을 제공한다."
+    ],
+    "answer": "B. 서버와 관련된 메트릭을 수집하기 위해선 에이전트 설치가 필요하다.\nC. 실제 에이전트가 잘 동작하는지 확인하기 위해서 Linux 에서는 ps -ef | grep agent 명령어로 확인이 가능하다."
+  },
+  {
+    "question": "Cloud Hadoop 의 근간 스토리지로 사용가능한 것을 모두 고르시오.",
+    "options": [
+      "A. Object Storage",
+      "B. Archive Storage",
+      "C. NAS",
+      "D. Block Storage"
+    ],
+    "answer": "A. Object Storage\nD. Block Storage"
+  },
+  {
+    "question": "다음 중 Network ACL 에 대한 설명 중 옳은 것을 모두 고르시오",
+    "options": [
+      "A. VPC 에 종속적이다.",
+      "B. 서버의 NIC 단위로 적용이 된다.",
+      "C. default 설정은 all permit 이다",
+      "D. 설정된 우선순위 보다는 모든 규칙을 확인하고 반영한다."
+    ],
+    "answer": "A. VPC 에 종속적이다.\nC. default 설정은 all permit 이다"
+  },
+  {
+    "question": "Sub account 부여할 접근 유형으로 알맞은 것을 모두 고르시오.",
+    "options": [
+      "A. Console access",
+      "B. API Gateway",
+      "C. CLI",
+      "D. Sub URL"
+    ],
+    "answer": "A. Console access\nB. API Gateway\nC. CLI\nD. Sub URL"
+  },
+  {
+    "question": "네이버 클라우드 플랫폼 Hadoop Cluster 에 포함되지 않은 컴포넌트는 무엇인가요?",
+    "options": [
+      "A. Zookeeper",
+      "B. Hbase",
+      "C. Impala",
+      "D. Zepplin Notebook"
+    ],
+    "answer": "C. Impala"
+  },
+  {
+    "question": "Linux 서버에서 시스템 부팅 메시지를 저장하는 로그파일은 무엇인가요?",
+    "options": [
+      "A. /var/log/dmesg",
+      "B. /var/log/wtmp",
+      "C. /var/log/access",
+      "D. /var/log/secure"
+    ],
+    "answer": "A. /var/log/dmesg"
+  },
+  {
+    "question": "리눅스에서 ICMP 와 TTL 을 이용하여 경로를 확인할 수 있는 프로그램은?",
+    "options": [
+      "A. Traceroute",
+      "B. Tracert",
+      "C. Tcpdump",
+      "D. Tcpview"
+    ],
+    "answer": "A. Traceroute"
+  }
+]
