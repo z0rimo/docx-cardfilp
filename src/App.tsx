@@ -181,7 +181,7 @@ export default function FlashcardApp() {
               <div className="fc-face fc-front">
                 <div className="fc-face-layout">
                   <span className="fc-tag fc-tag--q">QUESTION {currentIndex + 1}</span>
-                  <div className="fc-text">
+                  <div className="fc-text" style={{ justifyContent: 'flex-start' }}>
                     <p className="fc-q">{card.question}</p>
                     {card.subQuestion && (
                       <p className="fc-sub-q">{card.subQuestion}</p>
@@ -203,11 +203,9 @@ export default function FlashcardApp() {
               <div className="fc-face fc-back">
                 <div className="fc-face-layout">
                   <span className="fc-tag fc-tag--a">ANSWER</span>
-
-                  <div className="fc-text">
+                  <div className="fc-text" style={{ justifyContent: 'center' }}>
                     <p className="fc-a">{card.answer}</p>
                   </div>
-
                   <span className="fc-hint fc-hint--back">탭하여 뒤집기</span>
                 </div>
               </div>
@@ -229,7 +227,6 @@ export default function FlashcardApp() {
               >
                 {showExplanation ? '해설 숨기기' : '해설 보기'}
               </button>
-
               {showExplanation && <div className="fc-explain-box">{card.explanation}</div>}
             </div>
           )}
