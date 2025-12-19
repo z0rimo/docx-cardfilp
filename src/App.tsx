@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight, RotateCw, Info } from 'lucide-react';
 import './App.css'
 
 const FlashcardApp = () => {
-  // ... (기존 State 및 로직 생략 - 동일함) ...
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -32,9 +31,9 @@ const FlashcardApp = () => {
   const handleNext = () => { if (currentIndex < cards.length - 1) { setCurrentIndex(currentIndex + 1); setIsFlipped(false); setShowExplanation(false); } };
   const handlePrev = () => { if (currentIndex > 0) { setCurrentIndex(currentIndex - 1); setIsFlipped(false); setShowExplanation(false); } };
   const handleReset = () => {
-    setCurrentIndex(0);      // 첫 번째 카드로 인덱스 초기화
-    setIsFlipped(false);     // 앞면으로 고정
-    setShowExplanation(false); // 해설 닫기
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setShowExplanation(false);
   };
   const onTouchStart = (e) => { setTouchEnd(null); setTouchStart(e.targetTouches[0].clientX); };
   const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
@@ -52,7 +51,6 @@ const FlashcardApp = () => {
   return (
     <div style={styles.container}>
       <div style={styles.wrapper}>
-
         {/* 상단 진행 바 */}
         <div style={styles.progressContainer}>
           <div style={styles.progressInfo}>
@@ -63,7 +61,6 @@ const FlashcardApp = () => {
             <div style={{ ...styles.progressBarFill, width: `${progress}%` }} />
           </div>
         </div>
-
         {/* 카드 Area */}
         <div style={styles.cardArea}>
           <div style={styles.cardPerspective}>
@@ -94,7 +91,6 @@ const FlashcardApp = () => {
                   <span style={styles.hintText}>탭하여 뒤집기</span>
                 </div>
               </div>
-
               {/* 뒷면 */}
               <div style={styles.cardBack}>
                 <div style={styles.cardContentLayout}>
@@ -112,7 +108,6 @@ const FlashcardApp = () => {
             <p>← →: 이전/다음</p>
           </div>
         </div>
-
         {/* 하단 컨트롤 */}
         <div style={styles.bottomArea}>
           {isFlipped && currentCard.explanation && (
@@ -128,8 +123,6 @@ const FlashcardApp = () => {
               )}
             </div>
           )}
-
-
           <div style={styles.buttonGroup}>
             <button onClick={handlePrev} disabled={currentIndex === 0} style={styles.roundBtn}>
               <ChevronLeft size={24} />
@@ -141,7 +134,6 @@ const FlashcardApp = () => {
               <ChevronRight size={24} />
             </button>
           </div>
-
         </div>
       </div>
     </div>
