@@ -1,306 +1,302 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, RotateCw, Info } from 'lucide-react';
-
-type Flashcard = {
-  question: string;
-  options?: string[];
-  answer: string;
-  explanation?: string | null;
-};
+import './App.css'
 
 const FlashcardApp = () => {
-  const [cards, setCards] = useState<Flashcard[]>([]);
+  // ... (기존 State 및 로직 생략 - 동일함) ...
+  const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
-
   const [isLoading, setIsLoading] = useState(true);
-  const [loadError, setLoadError] = useState<string | null>(null);
+  const [loadError, setLoadError] = useState(null);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const minSwipeDistance = 50;
 
   useEffect(() => {
-    let cancelled = false;
-
-    const load = async () => {
+    const loadCards = async () => {
       try {
         setIsLoading(true);
-        setLoadError(null);
-
-        const res = await fetch('/flashcards.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-        const data = (await res.json()) as unknown;
-
-        if (!Array.isArray(data)) {
-          throw new Error('JSON 최상단은 배열([])이어야 합니다.');
-        }
-
-        // 최소 유효성 검사 + 정규화
-        const normalized: Flashcard[] = data
-          .map((x: any) => ({
-            question: String(x?.question ?? '').trim(),
-            options: Array.isArray(x?.options) ? x.options.map((v: any) => String(v)) : undefined,
-            answer: String(x?.answer ?? '').trim(),
-            explanation: x?.explanation == null ? null : String(x.explanation),
-          }))
-          .filter(c => c.question && c.answer);
-
-        if (!normalized.length) {
-          throw new Error('유효한 카드가 없습니다. (question/answer 필수)');
-        }
-
-        if (!cancelled) {
-          setCards(normalized);
-          setCurrentIndex(0);
-          setIsFlipped(false);
-          setShowExplanation(false);
-        }
-      } catch (e: any) {
-        if (!cancelled) {
-          setLoadError(`JSON 로드 실패: ${e?.message ?? String(e)}`);
-          setCards([]);
-        }
-      } finally {
-        if (!cancelled) setIsLoading(false);
-      }
+        const response = await fetch('/flashcards.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const validCards = data.filter(card => card.question && card.answer);
+        setCards(validCards);
+      } catch (error) { setLoadError(`로드 실패: ${error.message}`); }
+      finally { setIsLoading(false); }
     };
-
-    load();
-    return () => {
-      cancelled = true;
-    };
+    loadCards();
   }, []);
 
-  const handleNext = () => {
-    setCurrentIndex(prev => {
-      const next = Math.min(prev + 1, cards.length - 1);
-      return next;
-    });
-    setIsFlipped(false);
-    setShowExplanation(false);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(prev => Math.max(prev - 1, 0));
-    setIsFlipped(false);
-    setShowExplanation(false);
-  };
-
+  const handleNext = () => { if (currentIndex < cards.length - 1) { setCurrentIndex(currentIndex + 1); setIsFlipped(false); setShowExplanation(false); } };
+  const handlePrev = () => { if (currentIndex > 0) { setCurrentIndex(currentIndex - 1); setIsFlipped(false); setShowExplanation(false); } };
   const handleReset = () => {
-    setIsFlipped(false);
-    setShowExplanation(false);
+    setCurrentIndex(0);      // 첫 번째 카드로 인덱스 초기화
+    setIsFlipped(false);     // 앞면으로 고정
+    setShowExplanation(false); // 해설 닫기
+  };
+  const onTouchStart = (e) => { setTouchEnd(null); setTouchStart(e.targetTouches[0].clientX); };
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    if (distance > minSwipeDistance) handleNext();
+    if (distance < -minSwipeDistance) handlePrev();
   };
 
-  const handleFlip = () => {
-    setIsFlipped(v => !v);
-  };
-
-  // 키보드 단축키 (cards.length 등 최신 상태를 참조하도록 deps 포함)
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.code === 'Space') {
-        e.preventDefault();
-        setIsFlipped(v => !v);
-      } else if (e.code === 'ArrowLeft') {
-        if (currentIndex > 0) handlePrev();
-      } else if (e.code === 'ArrowRight') {
-        if (currentIndex < cards.length - 1) handleNext();
-      } else if (e.code === 'KeyR') {
-        handleReset();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndex, cards.length]);
-
-  const progress = useMemo(() => {
-    return cards.length > 0 ? ((currentIndex + 1) / cards.length) * 100 : 0;
-  }, [cards.length, currentIndex]);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-gray-700 text-2xl">카드를 로딩중...</div>
-      </div>
-    );
-  }
-
-  if (loadError) {
-    return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-        <div className="max-w-xl w-full bg-white rounded-xl shadow p-6">
-          <h2 className="text-xl font-bold text-gray-800 mb-2">로드 오류</h2>
-          <p className="text-gray-700 mb-4">{loadError}</p>
-          <div className="text-sm text-gray-600 space-y-2">
-            <div>✅ 확인 1) 파일 위치: <b>public/flashcards.json</b></div>
-            <div>✅ 확인 2) 브라우저에서 <b>/flashcards.json</b> 직접 열었을 때 JSON이 보여야 함</div>
-            <div>✅ 확인 3) 최상단은 배열([])이고, 각 항목은 question/answer 포함</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (cards.length === 0) {
-    return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-gray-700 text-2xl">카드가 없습니다.</div>
-      </div>
-    );
-  }
-
+  const progress = cards.length > 0 ? ((currentIndex + 1) / cards.length) * 100 : 0;
+  if (isLoading || !cards[currentIndex]) return <div style={styles.loadingContainer}>로딩 중...</div>;
   const currentCard = cards[currentIndex];
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="max-w-4xl mx-auto">
-        {/* 헤더 */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">네이버 클라우드 플랫폼</h1>
-          <p className="text-gray-600">기출문제 학습 카드</p>
-        </div>
+    <div style={styles.container}>
+      <div style={styles.wrapper}>
 
-        {/* 진행률 바 */}
-        <div className="mb-6">
-          <div className="flex justify-between text-gray-700 text-sm mb-2">
+        {/* 상단 진행 바 */}
+        <div style={styles.progressContainer}>
+          <div style={styles.progressInfo}>
             <span>{currentIndex + 1} / {cards.length}</span>
             <span>{Math.round(progress)}%</span>
           </div>
-          <div className="w-full bg-gray-300 rounded-full h-3 overflow-hidden">
-            <div
-              className="bg-blue-600 h-full transition-all duration-300 rounded-full"
-              style={{ width: `${progress}%` }}
-            />
+          <div style={styles.progressBarBg}>
+            <div style={{ ...styles.progressBarFill, width: `${progress}%` }} />
           </div>
         </div>
 
-        {/* 카드 */}
-        <div className="perspective-1000 mb-6">
-          <div
-            className="relative w-full h-96 transition-transform duration-500 transform-style-3d cursor-pointer"
-            onClick={handleFlip}
-            style={{
-              transformStyle: 'preserve-3d',
-              transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-            }}
-          >
-            {/* 앞면 - 문제 */}
+        {/* 카드 Area */}
+        <div style={styles.cardArea}>
+          <div style={styles.cardPerspective}>
             <div
-              className="absolute w-full h-full bg-white rounded-2xl shadow-2xl p-8 backface-hidden"
-              style={{ backfaceVisibility: 'hidden' }}
-            >
-              <div className="flex flex-col h-full">
-                <div className="text-sm text-indigo-600 font-semibold mb-4">문제</div>
-                <div className="flex-1 flex items-center justify-center">
-                  <p className="text-2xl font-medium text-gray-800 text-center leading-relaxed">
-                    {currentCard.question}
-                  </p>
-                </div>
-
-                {currentCard.options?.length ? (
-                  <div className="space-y-2 mt-6">
-                    {currentCard.options.map((option, idx) => (
-                      <div key={idx} className="text-gray-700 text-lg">
-                        {option}
-                      </div>
-                    ))}
-                  </div>
-                ) : null}
-
-                <div className="text-center text-gray-400 text-sm mt-4">
-                  클릭 또는 스페이스바로 뒤집기
-                </div>
-              </div>
-            </div>
-
-            {/* 뒷면 - 정답 */}
-            <div
-              className="absolute w-full h-full bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-2xl p-8 backface-hidden"
               style={{
-                backfaceVisibility: 'hidden',
-                transform: 'rotateY(180deg)'
+                ...styles.cardContainer,
+                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
               }}
+              onClick={() => setIsFlipped(!isFlipped)}
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
             >
-              <div className="flex flex-col h-full">
-                <div className="text-sm text-white font-semibold mb-4">정답</div>
-                <div className="flex-1 flex items-center justify-center">
-                  <p className="text-3xl font-bold text-white text-center leading-relaxed">
-                    {currentCard.answer}
-                  </p>
+              {/* 앞면 */}
+              <div style={styles.cardFront}>
+                <div style={styles.cardContentLayout}>
+                  <span style={styles.cardTag}>QUESTION</span>
+                  <div style={styles.cardTextContent}>
+                    <p style={styles.questionText}>{currentCard.question}</p>
+                    {currentCard.options && (
+                      <div style={styles.optionsWrapper}>
+                        {currentCard.options.map((opt, i) => (
+                          <div key={i} style={styles.optionItem}>{opt}</div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <span style={styles.hintText}>탭하여 뒤집기</span>
                 </div>
-                <div className="text-center text-white/80 text-sm mt-4">
-                  클릭 또는 스페이스바로 뒤집기
+              </div>
+
+              {/* 뒷면 */}
+              <div style={styles.cardBack}>
+                <div style={styles.cardContentLayout}>
+                  <span style={styles.cardTagWhite}>ANSWER</span>
+                  <div style={styles.cardTextContent}>
+                    <p style={styles.answerText}>{currentCard.answer}</p>
+                  </div>
+                  <span style={styles.hintTextWhite}>탭하여 뒤집기</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* 해설 버튼 */}
-        {isFlipped && currentCard.explanation ? (
-          <div className="mb-6">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowExplanation(v => !v);
-              }}
-              className="w-full bg-gray-700 hover:bg-gray-800 text-white py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-            >
-              <Info size={20} />
-              {showExplanation ? '해설 숨기기' : '해설 보기'}
-            </button>
-
-            {showExplanation && (
-              <div className="mt-4 bg-white rounded-lg p-6 shadow-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-800 mb-2">📝 해설</h3>
-                <p className="text-gray-700 leading-relaxed">{currentCard.explanation}</p>
-              </div>
-            )}
+          <div className="text-center text-gray-600 text-sm">
+            <p>손가락 스와이프</p>
+            <p>← →: 이전/다음</p>
           </div>
-        ) : null}
-
-        {/* 컨트롤 버튼 */}
-        <div className="flex gap-4 justify-center items-center">
-          <button
-            onClick={handlePrev}
-            disabled={currentIndex === 0}
-            className="bg-gray-700 hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed text-white p-4 rounded-full transition-colors"
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button
-            onClick={handleReset}
-            className="bg-gray-700 hover:bg-gray-800 text-white p-4 rounded-full transition-colors"
-            title="카드 초기화 (R)"
-          >
-            <RotateCw size={24} />
-          </button>
-
-          <button
-            onClick={handleNext}
-            disabled={currentIndex === cards.length - 1}
-            className="bg-gray-700 hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed text-white p-4 rounded-full transition-colors"
-          >
-            <ChevronRight size={24} />
-          </button>
         </div>
 
-        {/* 키보드 단축키 안내 */}
-        <div className="mt-8 text-center text-gray-600 text-sm">
-          <p className="mb-1">⌨️ 키보드 단축키</p>
-          <p>Space: 카드 뒤집기 | ← →: 이전/다음 | R: 초기화</p>
+        {/* 하단 컨트롤 */}
+        <div style={styles.bottomArea}>
+          {isFlipped && currentCard.explanation && (
+            <div style={styles.explanationWrapper}>
+              <button
+                style={styles.explanationBtn}
+                onClick={(e) => { e.stopPropagation(); setShowExplanation(!showExplanation); }}
+              >
+                <Info size={16} /> {showExplanation ? '해설 숨기기' : '해설 보기'}
+              </button>
+              {showExplanation && (
+                <div style={styles.explanationBox}>{currentCard.explanation}</div>
+              )}
+            </div>
+          )}
+
+
+          <div style={styles.buttonGroup}>
+            <button onClick={handlePrev} disabled={currentIndex === 0} style={styles.roundBtn}>
+              <ChevronLeft size={24} />
+            </button>
+            <button onClick={handleReset} style={styles.roundBtn}>
+              <RotateCw size={20} />
+            </button>
+            <button onClick={handleNext} disabled={currentIndex === cards.length - 1} style={styles.roundBtn}>
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
         </div>
       </div>
-
-      <style>{`
-        .perspective-1000 { perspective: 1000px; }
-        .transform-style-3d { transform-style: preserve-3d; }
-        .backface-hidden { backface-visibility: hidden; }
-      `}</style>
     </div>
   );
+};
+
+const styles = {
+  container: {
+    width: '100%',
+    height: '100dvh',
+    backgroundColor: '#f1f5f9',
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'center',
+    boxSizing: 'border-box' as const,
+  },
+  wrapper: {
+    width: '100%',
+    maxWidth: '470px',
+    padding: '16px',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    boxSizing: 'border-box' as const,
+  },
+  progressContainer: {
+    marginBottom: '16px',
+    width: '100%',
+  },
+  progressInfo: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    fontSize: '13px',
+    color: '#64748b',
+    marginBottom: '6px',
+    fontWeight: '600',
+  },
+  progressBarBg: {
+    height: '6px',
+    backgroundColor: '#e2e8f0',
+    borderRadius: '3px',
+    width: '100%',
+  },
+  progressBarFill: {
+    height: '100%',
+    backgroundColor: '#3b82f6',
+    borderRadius: '3px',
+    transition: 'width 0.3s ease',
+  },
+  cardArea: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  cardPerspective: {
+    perspective: '1200px', // 원근감 증가
+    width: '100%',
+    height: '100%',
+    maxHeight: '400px', // 카드 최대 높이 제한
+    position: 'relative' as const,
+  },
+  cardContainer: {
+    position: 'absolute' as const,
+    width: '100%',
+    height: '100%',
+    transformStyle: 'preserve-3d' as const,
+    transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+    transformOrigin: 'center center', // 회전 중심 고정
+  },
+  cardFront: {
+    position: 'absolute' as const,
+    inset: 0, // top, left, right, bottom 0으로 고정
+    width: '100%',
+    height: '100%',
+    backfaceVisibility: 'hidden' as const,
+    WebkitBackfaceVisibility: 'hidden' as const,
+    backgroundColor: '#ffffff',
+    borderRadius: '20px',
+    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+    border: '1px solid #e2e8f0',
+    boxSizing: 'border-box' as const,
+  },
+  cardBack: {
+    position: 'absolute' as const,
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    backfaceVisibility: 'hidden' as const,
+    WebkitBackfaceVisibility: 'hidden' as const,
+    transform: 'rotateY(180deg)',
+    background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
+    borderRadius: '20px',
+    boxSizing: 'border-box' as const,
+  },
+  cardContentLayout: {
+    padding: '24px',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    boxSizing: 'border-box' as const,
+  },
+  cardTag: { fontSize: '11px', fontWeight: '800', color: '#3b82f6' },
+  cardTagWhite: { fontSize: '11px', fontWeight: '800', color: 'rgba(255,255,255,0.7)' },
+  cardTextContent: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column' as const,
+    justifyContent: 'center',
+    textAlign: 'center' as const,
+    overflow: 'hidden',
+  },
+  questionText: { fontSize: '1.2rem', fontWeight: '700', color: '#1e293b', marginBottom: '12px' },
+  answerText: { fontSize: '1.4rem', fontWeight: '700', color: '#fff' },
+  optionsWrapper: { textAlign: 'left' as const, fontSize: '0.9rem', color: '#475569', gap: '4px' },
+  optionItem: { padding: '2px 0' },
+  hintText: { textAlign: 'center' as const, fontSize: '11px', color: '#94a3b8' },
+  hintTextWhite: { textAlign: 'center' as const, fontSize: '11px', color: 'rgba(255,255,255,0.5)' },
+  bottomArea: { paddingBottom: '20px' },
+  explanationWrapper: { marginBottom: '12px' },
+  explanationBtn: {
+    width: '100%',
+    padding: '8px',
+    borderRadius: '10px',
+    border: 'none',
+    backgroundColor: '#fff',
+    fontSize: '12px',
+    fontWeight: '600',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '4px',
+  },
+  explanationBox: {
+    marginTop: '8px',
+    padding: '12px',
+    backgroundColor: '#fff',
+    borderRadius: '10px',
+    fontSize: '12px',
+    maxHeight: '70px',
+    overflowY: 'auto' as const,
+  },
+  buttonGroup: { display: 'flex', justifyContent: 'center', gap: '30px' },
+  roundBtn: {
+    width: '56px',
+    height: '56px',
+    borderRadius: '50%',
+    backgroundColor: '#1e293b',
+    color: '#fff',
+    border: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  loadingContainer: { height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' },
 };
 
 export default FlashcardApp;
